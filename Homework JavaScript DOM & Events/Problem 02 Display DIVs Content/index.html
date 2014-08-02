@@ -1,0 +1,22 @@
+<html>
+<body>
+<div>first div</div>
+<div>second div</div>
+<div class="empty"></div>
+<div>third div
+    <div>inner div</div>
+</div>
+<ul id="result"></ul>
+<script>
+    // TODO: write your JS code here …
+    var divs = document.getElementsByTagName('div');
+    var ul = document.getElementById('result');
+    for (var i = 0; i < divs.length; i++) {
+        var li = document.createElement('li');
+        li.innerText = divs[i].innerText;
+        if (li.innerText != '')
+            ul.appendChild(li);
+    }
+</script>
+</body>
+</html>

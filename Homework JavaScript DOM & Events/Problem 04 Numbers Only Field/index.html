@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Problem 4 Numbers Only Field</title>
+
+</head>
+<body>
+<div id="field">
+    <input type="text" placeholder="" id="input"/>
+</div>
+<script type="text/javascript">
+    setInterval(function () {
+        var inputField = document.getElementById('input');
+        if (isNaN(inputField.value)) {
+            inputField.value = inputField.value.slice(0, -1);
+            inputField.style.background = 'red';
+            inputField.disabled = true;
+            setTimeout(getPreviousValue, 2000);
+        }
+        function getPreviousValue() {
+
+            inputField.style.background = 'white';
+            inputField.disabled = false;
+            inputField.focus();
+
+        }
+
+        console.log(number)
+    }, 100);
+
+</script>
+</body>
+</html>
